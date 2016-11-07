@@ -1,0 +1,74 @@
+/*body {*/
+    /*background-image: url("../assets/cat-background.png");*/
+/*}*/
+
+body:after {
+    content: "";
+    background: url("../assets/cat-background.png");
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+h1 {
+    font-family: "Finger Paint", cursive;
+    font-size: 3em;
+    text-align: center;
+}
+
+.weatherImage {
+    display: none;
+}
+
+.temperatureContainer, #location {
+    font-family: 'The Girl Next Door', cursive;
+    text-align: center;
+    font-size: 2em;
+}
+
+.temperature {
+    position: relative;
+    margin: 0;
+    font-size: 2.5em;
+}
+
+#location {
+    margin-bottom: 0;
+}
+
+#temperature {
+    display: inline-block;
+    margin-right: 0.7em;
+}
+
+#circle {
+    position: absolute;
+    top: 2.3em;
+    left: 9.25em;
+    padding-top: -2em;
+    color: rgb(86, 86, 149);
+}
+
+#celsius {
+    text-decoration: none;
+    display: inline-block;
+    position: absolute;
+    left: 9.5em;
+    cursor: pointer;
+    color: rgb(86, 86, 149);
+}
+
+#fahrenheit {
+    text-decoration: none;
+    display: none;
+    position: absolute;
+    left: 9.5em;
+    cursor: pointer;
+    color: rgb(86, 86, 149);
+}
+
+
