@@ -58,7 +58,7 @@ window.onload = function(){
         temp = Math.round(weatherData.main.temp);
         temperature.textContent = temp;
         console.log(weatherData.weather[0].main);
-        if (weatherData.weather[0].main == "Rain" || "Drizzle" || "Thunderstorm") {
+        if (weatherData.weather[0].main == "Rain" || weatherData.weather[0].main == "Drizzle" || weatherData.weather[0].main == "Thunderstorm") {
             rainy.className = "";
             rainy.style.display = "block";
             rainy.style.margin = "auto";
