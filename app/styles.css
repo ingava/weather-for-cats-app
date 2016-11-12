@@ -40,6 +40,10 @@ h1 {
     display: inline-block;
 }
 
+.imageContainer {
+    margin: 0 auto;
+}
+
 #temperature {
     padding-right: 0.5em;
 }
@@ -74,4 +78,20 @@ h1 {
     color: rgb(86, 86, 149);
 }
 
+/* Extra Small Devices, Phones */
 
+@media (max-width: 480px) {
+
+    img {
+        max-width: 400px;
+    }
+}
+
+/* Custom, iPhone Retina */
+
+@media (max-width: 375px) {
+
+    img {
+        max-width: 310px;
+    }
+}
