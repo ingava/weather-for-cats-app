@@ -16,11 +16,6 @@ h1 {
     text-align: center;
 }
 
-.weatherImage {
-    display: none;
-}
-
-
 .temperatureContainer, #location {
     font-family: 'The Girl Next Door', cursive;
     text-align: center;
@@ -41,6 +36,7 @@ h1 {
 }
 
 .imageContainer {
+    width: 35%;
     margin: 0 auto;
 }
 
@@ -78,12 +74,26 @@ h1 {
     color: rgb(86, 86, 149);
 }
 
+/* Tablets */
+
+@media (max-width: 768px) {
+
+    .imageContainer {
+        width: 70%;
+    }
+}
+
 /* Extra Small Devices, Phones */
 
 @media (max-width: 480px) {
 
+    .imageContainer {
+        width: 100%;
+    }
+
     img {
-        max-width: 400px;
+        max-width: 380px;
+        margin-left: 1em;
     }
 }
 
@@ -91,7 +101,12 @@ h1 {
 
 @media (max-width: 375px) {
 
+    .imageContainer {
+        width: 100%;
+    }
+
     img {
+        margin-left: 0;
         max-width: 310px;
     }
 }

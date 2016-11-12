@@ -13,13 +13,10 @@ window.onload = function(){
 
     // selecting DOM elements
 
-    var cloudy      = document.getElementById("cloudy");
-    var sunny       = document.getElementById("sunny");
-    var snow        = document.getElementById("snow");
-    var rainy       = document.getElementById("rainy");
-    var temperature = document.getElementById("temperature");
+    var temperatureField = document.getElementById("temperature");
     var unitsC      = document.getElementById("celsius");
     var unitsF      = document.getElementById("fahrenheit");
+    var image       = document.getElementsByTagName("img");
 
     //setting up promise function
 
@@ -56,24 +53,15 @@ window.onload = function(){
         var location = document.getElementById("location");
         location.textContent = loc + ", " + weatherData.sys.country;
         temp = Math.round(weatherData.main.temp);
-        temperature.textContent = temp;
-        console.log(weatherData.weather[0].main);
+        temperatureField.textContent = temp;
         if (weatherData.weather[0].main == "Rain" || weatherData.weather[0].main == "Drizzle" || weatherData.weather[0].main == "Thunderstorm") {
-            rainy.className = "";
-            rainy.style.display = "block";
-            rainy.style.margin = "auto";
+            image.src = "assets/rainy.gif";
         } else if (weatherData.weather[0].main == "Snow") {
-            snow.className = "";
-            snow.style.display = "block";
-            snow.style.margin = "auto";
+            image.src = "assets/snow.gif";
         } else if (weatherData.weather[0].main == "Clear") {
-            sunny.className = "";
-            sunny.style.display = "block";
-            sunny.style.margin = "auto";
+            image.src = "assets/sunny.gif";
         } else if (weatherData.weather[0].main == "Clouds") {
-            cloudy.className = "";
-            cloudy.style.display = "block";
-            cloudy.style.margin = "auto";
+            image.src = "assets/cloudy.gif";
         }
     }).catch(function(error){
         console.log(error);
@@ -90,10 +78,10 @@ window.onload = function(){
     unitsF.addEventListener("click", function () {
         unitsF.style.display = "none";
         unitsC.style.display = "inline-block";
-        temperature.textContent = temp;
+        temperatureField.textContent = temp;
     });
     
     function toFahrenheit() {
-        temperature.textContent = Math.round(temp * 1.8 + 32);
+        temperatureField.textContent = Math.round(temp * 1.8 + 32);
     }
 };
