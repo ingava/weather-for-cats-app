@@ -49,7 +49,6 @@ window.onload = function(){
         url  = api + units + apiKey;
         return get(url);
     }).then(function(weatherData){
-        console.log(url);
         var location = document.getElementById("location");
         location.textContent = loc + ", " + weatherData.sys.country;
         temp = Math.round(weatherData.main.temp);
@@ -63,8 +62,9 @@ window.onload = function(){
         } else if (weatherData.weather[0].main == "Clouds") {
             image.src = "assets/cloudy.gif";
         }
-    }).catch(function(error){
-        console.log(error);
+    }).catch(function(){
+        var error = "There was an error fetching your location, please try again later.";
+        alert(error);
     });
 
     //event handlers
