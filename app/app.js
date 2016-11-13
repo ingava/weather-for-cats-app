@@ -16,7 +16,7 @@ window.onload = function(){
     var temperatureField = document.getElementById("temperature");
     var unitsC      = document.getElementById("celsius");
     var unitsF      = document.getElementById("fahrenheit");
-    var image       = document.getElementsByTagName("img");
+    var image       = document.getElementById("image");
 
     //setting up promise function
 
