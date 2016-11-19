@@ -36,7 +36,7 @@ h1 {
 }
 
 .imageContainer {
-    width: 35%;
+    width: 400px;
     margin: 0 auto;
 }
 
@@ -74,26 +74,16 @@ h1 {
     color: rgb(86, 86, 149);
 }
 
-/* Tablets */
-
-@media (max-width: 768px) {
-
-    .imageContainer {
-        width: 70%;
-    }
-}
-
 /* Extra Small Devices, Phones */
 
 @media (max-width: 480px) {
 
     .imageContainer {
-        width: 100%;
+        max-width: 380px;
     }
 
     img {
         max-width: 380px;
-        margin-left: 1em;
     }
 }
 
@@ -102,11 +92,10 @@ h1 {
 @media (max-width: 375px) {
 
     .imageContainer {
-        width: 100%;
+        width: 310px;
     }
 
     img {
-        margin-left: 0;
         max-width: 310px;
     }
 }
