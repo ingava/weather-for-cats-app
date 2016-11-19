@@ -49,5 +49,5 @@ http.createServer(function (request, response) {
         }
     });
 
-}).listen(8888);
-console.log('Server running at http://localhost:8888/');
+}).listen(80);
+console.log('Server running at http://localhost:80/');
