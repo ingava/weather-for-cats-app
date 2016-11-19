@@ -1,0 +1,20 @@
+{
+  "name": "local-weather-app",
+  "version": "1.0.0",
+  "description": "This app shows weather according to the cat's location. Any cat can look at it and be informed about what to expect outside.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingava/weather-for-cats-app.git"
+  },
+  "author": "Inga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ingava/weather-for-cats-app/issues"
+  },
+  "homepage": "https://github.com/ingava/weather-for-cats-app#readme"
+}
