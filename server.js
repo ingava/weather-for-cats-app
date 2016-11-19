@@ -1,6 +1,7 @@
 var http = require('http');
 var fs = require('fs');
 var path = require('path');
+var port = process.env.PORT || 8080;
 
 http.createServer(function (request, response) {
     console.log('Processing request for: ' + request.url);
@@ -49,5 +50,5 @@ http.createServer(function (request, response) {
         }
     });
 
-}).listen(80);
-console.log('Server running at http://localhost:80/');
+}).listen(port);
+console.log('Server running at http://localhost:' + port);
